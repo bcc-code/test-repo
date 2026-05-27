@@ -3,7 +3,7 @@ name: Other workflow
 on:
   push:
     branches:
-      - 'non-existentt'
+      - 'non-existenttt'
   workflow_dispatch:
 
 jobs:
@@ -19,14 +19,14 @@ jobs:
 
       - name: Reset master branch
         run: |
-          git fetch origin non-existent:non-existent
-          git reset --hard non-existent
+          git fetch origin non-existenttt:non-existenttt
+          git reset --hard non-existenttt
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e
         with:
           title: 'New PR'
           body: 'Some meaningless update'
-          branch: 'non-existent'
+          branch: 'non-existenttt'
           commit-message: 'no actual update'
           delete-branch: true
