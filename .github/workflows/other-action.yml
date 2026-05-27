@@ -3,7 +3,7 @@ name: Other workflow
 on:
   push:
     branches:
-      - 'non-existent'
+      - 'non-existentt'
   workflow_dispatch:
 
 jobs:
