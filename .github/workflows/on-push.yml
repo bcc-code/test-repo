@@ -1,4 +1,5 @@
 name: On push workflow with path and branch
+run-name: Test - ${{inputs.asd || 'all'}}
 
 on:
   push:
@@ -7,6 +8,20 @@ on:
     paths:
       - 'some/path/**'
   workflow_dispatch:
+    inputs:
+      asd:
+        description: Test input
+        type: choice
+        default: all
+        options:
+          - test1
+          - test2
+          - test3
+          - all
+
+permissions:
+  contents: "read"
+  id-token: "write"
 
 jobs:
   build:
